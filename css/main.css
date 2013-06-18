@@ -46,6 +46,8 @@ div.bar .label {
 div.bar .ico-wrapper {
   width: 90px;
   height: 90px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #ee7f70;
   border: 10px solid #1c2025;
@@ -130,6 +132,8 @@ header nav .pointer {
   background-color: #000;
   border-radius: 0 0 10px 10px;
   position: absolute;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   right: 0;
   top: 0;
@@ -186,6 +190,8 @@ header .headline {
 header .logo {
   width: 481px;
   height: 108px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 17px 30px;
   z-index: 1;
@@ -312,6 +318,12 @@ section.team .members .member .overview .shade {
   position: absolute;
   z-index: -1;
 }
+@media (max-width: 480px) {
+  section.team .members .member {
+    margin: 0 auto 20px;
+    float: none;
+  }
+}
 section.technology .page {
   background: url(/img/technology_bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -333,7 +345,7 @@ section.technology .overview {
   line-height: 1.46;
   position: relative;
   z-index: 1;
-  height: 390px;
+  min-height: 390px;
 }
 section.technology .overview .shade {
   background-color: #000;
@@ -345,6 +357,11 @@ section.technology .overview .shade {
   left: 0px;
   position: absolute;
   z-index: -1;
+}
+@media (max-width: 480px) {
+  section.technology .overview {
+    padding: 20px;
+  }
 }
 section.contact .page {
   background-color: #f9f5f1;
@@ -390,8 +407,8 @@ section.contact .form blockquote {
 }
 section.contact .form .fields input,
 section.contact .form .fields textarea {
+  width: 100%;
   display: block;
-  width: 535px;
   margin-bottom: 20px;
   border: 0;
   border-radius: 5px;
@@ -422,7 +439,22 @@ section.contact .form button {
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+@media (max-width: 480px) {
+  section.contact .form blockquote {
+    display: none;
+  }
+  section.contact .form .fields {
+    width: 260px;
+    float: none;
+  }
+  section.contact .form button {
+    font-size: 2em;
+    width: 260px;
+  }
 }
 section.case-study .page {
   background-color: #df7568;
@@ -494,23 +526,45 @@ section.case-study .tile img.padding {
   section.case-study .page {
     padding: 30px 0;
   }
-  section.case-study .left,
-  section.case-study .right {
+  section.case-study .tile {
+    width: 280px;
+  }
+  section.case-study .tile .left,
+  section.case-study .tile .right {
     width: 100%;
     float: none;
   }
-  section.case-study .left .block,
-  section.case-study .right .block {
-    margin: 5px auto ;
+  section.case-study .tile .block {
+    width: 100%;
+    margin: 5px auto;
   }
-  section.case-study .left img,
-  section.case-study .right img {
+  section.case-study .tile .description {
+    width: 256px;
+  }
+  section.case-study .tile blockquote.block {
+    height: auto;
+    width: 266px;
+  }
+  section.case-study .tile blockquote.block p {
+    font-size: 1em;
+  }
+  section.case-study .tile img {
     float: none;
+  }
+  section.case-study .tile img.tools {
+    border: 5px solid #242424;
   }
 }
 section.about .page {
   background-color: #f9f5f1;
   padding: 100px 0 128px;
+}
+section.about div.bar .ico-wrapper span {
+  height: 39px;
+  width: 20px;
+  background-position: 0 0px;
+  margin-top: -19.5px;
+  margin-left: -10px;
 }
 section.about .overview {
   background-color: #e3dbd3;
@@ -529,12 +583,12 @@ section.about .gallery {
   width: 960px;
   height: 773px;
 }
-section.about div.bar .ico-wrapper span {
-  height: 39px;
-  width: 20px;
-  background-position: 0 0px;
-  margin-top: -19.5px;
-  margin-left: -10px;
+@media (max-width: 480px) {
+  section.about .gallery {
+    background: url(/img/devices.png);
+    width: 247px;
+    height: 182px;
+  }
 }
 section.responsive .page {
   background: url(/img/responsive_bg.jpg) no-repeat center center fixed;
@@ -576,4 +630,12 @@ section.responsive .overview .content {
 section.responsive .overview img {
   padding: 30px 0 0 48px;
   float: left;
+}
+@media (max-width: 480px) {
+  section.responsive .overview img {
+    padding: 0;
+    float: none;
+    margin-left: -20px;
+    width: 100%;
+  }
 }

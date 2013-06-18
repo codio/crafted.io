@@ -23,7 +23,7 @@ section.technology {
     line-height: 1.46;
     position: relative;
     z-index: 1;
-    height: 390px;
+    min-height: 390px;
 
     .shade {
       background-color: #000;
@@ -35,6 +35,9 @@ section.technology {
       left: 0px;
       position: absolute;
       z-index: -1;
+    }
+    @media @phone {
+      padding: 20px;
     }
   }
 
