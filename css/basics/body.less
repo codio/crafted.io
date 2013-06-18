@@ -3,11 +3,25 @@
   min-height: 390px;
 }
 
+.clear:before,
+.clear:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clear:after {
+  clear: both;
+}
+
+.clear {
+  *zoom: 1;
+}
+
 .container {
   max-width: 960px;
   margin: auto;
   position: relative;
-  @media @iphone {
+  @media @phone {
     max-width: 500px;
     margin: auto;
     position: relative;
@@ -50,7 +64,7 @@ div.bar {
     }
   }
 
-  @media @iphone {
+  @media @phone {
     .label {
       font-size: 14px;
       line-height: 3.8;
@@ -67,6 +81,49 @@ div.bar {
         margin-top: 5px;
       }
     }
+  }
+
+}
+
+
+blockquote {
+  padding: 12px;
+  margin: 0;
+  background-color: #242424;
+  border-radius: 15px;
+
+  p {
+    font-size: 20px;
+    font-family: "Cabin";
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  .sign {
+    padding-top: 73px;
+    font-size: 18px;
+    font-style: italic;
+    font-family: "Cabin";
+    color: #ccc;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: right;
+    .red {
+      color: #d34d3e;
+    }
+  }
+  .quote {
+    font-size: 100px;
+    font-family: "Times New Roman";
+    color: #4C4C4C;
+    font-weight: bold;
+    line-height: 0.2;
+    float: left;
+    height: 20px;
+  }
+  .quote.closing {
+    line-height: 1;
+    float: right;
   }
 
 }
