@@ -1,0 +1,136 @@
+header {
+  background: url(/img/header_bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 390px;
+
+  nav {
+    .pointer {
+      cursor: pointer;
+      padding: 16px 0 19px;
+      width: 89px;
+      height: 79px;
+      background-color: #000;
+      border-radius: 0 0 10px 10px;
+      position: absolute;
+      box-sizing: border-box;
+      right: 0;
+      top: 0;
+
+      .bar {
+        width: 39px;
+        height: 7px;
+        display: block;
+        background: #CCC;
+        margin: 0 0 9px 31px;
+        position: relative;
+      }
+
+      .circle {
+        width: 10px;
+        height: 10px;
+        background: #CCC;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        left: -15px;
+        top: -2px;
+      }
+    }
+    @media @iphone {
+      .pointer {
+        -webkit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        -o-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        -o-transform: scale(0.5);
+        transform: scale(0.5);
+      }
+    }
+  }
+
+  .headline {
+    color: #FFF;
+    font-family: 'Cabin', sans-serif;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    text-align: center;
+    max-width: 918px;
+    font-size: 29pt;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 0 auto 70px;
+    @media @iphone {
+      font-size: 20pt;
+    }
+  }
+
+  .logo {
+    width: 481px;
+    height: 108px;
+    box-sizing: border-box;
+    padding: 17px 30px;
+    z-index: 1;
+    position: relative;
+    margin: 130px auto 95px;
+
+    .shape {
+      background-color: #000;
+      opacity: 0.5;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .ico {
+      background-image: url(/img/logo.png);
+      width: 72px;
+      height: 80px;
+      display: block;
+      float: left;
+      margin-right: 16px;
+    }
+
+    .text {
+      color: #fff;
+      font-family: 'Cabin', sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 80px;
+      line-height: 0.9;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+      float: left;
+      display: block;
+      width: 333px;
+      height: 65px;
+    }
+
+    @media @iphone {
+      padding: 17px 14px;
+      width: 100px;
+      margin: 0px auto 65px;
+
+      .ico {
+        margin-right: 0px;
+        float: none;
+      }
+
+      .text {
+        margin-top: 20px;
+        float: none;
+        font-size: 40px;
+        width: 100px;
+        height: auto;
+        margin-left: -40px;
+      }
+    }
+  }
+}
