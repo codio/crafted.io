@@ -59,6 +59,9 @@ section.contact {
         font-family: "Cabin";
         color: #acacac;
         line-height: 1.2;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
       }
 
       textarea {
@@ -88,11 +91,15 @@ section.contact {
     }
 
     @media @phone {
-      blockquote {display: none}
+      blockquote {
+        display: none
+      }
+
       .fields {
         width: 260px;
         float: none;
       }
+
       button {
         font-size: 2em;
         width: 260px;
