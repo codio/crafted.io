@@ -39,6 +39,12 @@ section.responsive {
     img {
       padding: 30px 0 0 48px;
       float: left;
+      @media @phone {
+        padding: 0;
+        float: none;
+        margin-left: -20px;
+        width: 100%;
+      }
     }
   }
 

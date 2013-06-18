@@ -4,6 +4,14 @@ section.about {
     padding: 100px 0 128px;
   }
 
+  div.bar .ico-wrapper span {
+    height: 39px;
+    width: 20px;
+    background-position: 0 0px;
+    margin-top: -19.5px;
+    margin-left: -10px;
+  }
+
   .overview {
     background-color: #e3dbd3;
     border-radius: 15px;
@@ -23,12 +31,12 @@ section.about {
     height: 773px;
   }
 
-  div.bar .ico-wrapper span {
-    height: 39px;
-    width: 20px;
-    background-position: 0 0px;
-    margin-top: -19.5px;
-    margin-left: -10px;
+  @media @phone {
+    .gallery {
+      background: url(/img/devices.png);
+      width: 247px;
+      height: 182px;
+    }
   }
 }
 
