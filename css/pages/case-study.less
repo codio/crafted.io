@@ -74,27 +74,28 @@ section#case-study {
     }
   }
 
-  @media @phone {
+  @media @smallTablet, @tablet {
     .page {
       padding: 30px 0;
     }
 
     .tile {
-      width: 280px;
+      width: 400px;
+      margin: auto;
+
       .left, .right {
         width: 100%;
         float: none;
       }
       .block {
         width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         margin: 5px auto;
-      }
-      .description {
-        width: 256px;
       }
       blockquote.block {
         height: auto;
-        width: 266px;
         p {
           font-size: 1em;
         }
@@ -107,6 +108,14 @@ section#case-study {
       }
     }
   }
+
+  @media @phone {
+    .tile {
+      width: 280px;
+    }
+  }
+
+
 }
 
 
