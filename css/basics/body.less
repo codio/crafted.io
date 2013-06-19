@@ -1,3 +1,9 @@
+body {
+  font-family: "Helvetica Neue",Helvetica,sans-serif;
+  font-weight: 400;
+  color: #3f4850;
+}
+
 a, a:hover, a:active, a:focus {
   outline: 0;
 }
@@ -33,31 +39,33 @@ a, a:hover, a:active, a:focus {
 }
 
 div.bar {
-  height: 58px;
+  height: 46px;
   background-color: #1c2025;
 
   .label {
-    font-size: 40px;
-    font-family: 'Cabin', sans-serif;
+    font-size: 20px;
+    font-family: @titleFont;
     text-transform: uppercase;
     background-color: #1c2025;
-    color: #fff;
+    color: #ddd;
     line-height: 1.4;
     float: left;
     max-width: 600px;
+    padding-top: 12px;
   }
 
   .ico-wrapper {
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
     -webkit-box-sizing: border-box;;
     -moz-box-sizing: border-box;;
     box-sizing: border-box;;
-    background-color: #ee7f70;
-    border: 10px solid #1c2025;
+    background-color: #D44E3E;
+    border: 8px solid #1c2025;
     float: left;
     margin: -15px 10px 0 0;
     position: relative;
+    border-radius: 50%;
 
     span {
       position: absolute;
@@ -99,7 +107,7 @@ blockquote {
 
   p {
     font-size: 20px;
-    font-family: "Cabin";
+    font-family: @titleFont;
     color: #fff;
     line-height: 1.2;
   }
@@ -108,7 +116,7 @@ blockquote {
     padding-top: 73px;
     font-size: 18px;
     font-style: italic;
-    font-family: "Cabin";
+    font-family: @titleFont;
     color: #ccc;
     font-weight: bold;
     line-height: 1.2;
