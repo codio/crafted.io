@@ -90,19 +90,18 @@ section#contactus {
       box-sizing: border-box;
     }
 
-    @media @phone {
+    @media @smallTablet, @tablet, @phone {
       blockquote {
         display: none
       }
-
       .fields {
-        width: 260px;
         float: none;
+        width: 100%;
       }
-
       button {
         font-size: 2em;
-        width: 260px;
+        margin: auto;
+        width: 100%;
       }
     }
   }
