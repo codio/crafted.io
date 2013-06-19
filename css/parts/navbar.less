@@ -182,29 +182,17 @@ nav {
       }
     }
 
-    .pointer {
-      right: -45px;
-      -webkit-transform-origin: 0 0;
-      -moz-transform-origin: 0 0;
-      -ms-transform-origin: 0 0;
-      -o-transform-origin: 0 0;
-      transform-origin: 0 0;
-      -webkit-transform: scale(0.5);
-      -moz-transform: scale(0.5);
-      -ms-transform: scale(0.5);
-      -o-transform: scale(0.5);
-      transform: scale(0.5);
-    }
-
     div.el {
-      margin: 10px 0 0 15px;
+      margin: 10px 0 0 0px;
       height: 58px;
       float: none;
+      border-bottom: 1px solid #333;
 
       &.home {
-        margin: 0px auto;
+        margin: 2px auto 0;
         width: 72px;
         height: 80px;
+        border-bottom: 0;
       }
       span.ico.logo {
         display: block;
@@ -220,6 +208,37 @@ nav {
         font-size: 14px;
         line-height: 3.6;
         max-width: 200px;
+      }
+    }
+
+    @media (max-height: 480px) {
+      padding-top: 70px;
+
+      div.el {
+        margin: 15px 0 0 15px;
+        width: 70px;
+        float: left;
+        height: 100px;
+        border-bottom: 1px solid #333;
+
+        &.home {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        span.ico {
+          float: none;
+          margin: auto;
+        }
+        span.label {
+          float: none;
+          font-size: 10px;
+          line-height: 1;
+          text-align: center;
+          display: block;
+          padding-top: 20px;
+        }
       }
     }
   }
