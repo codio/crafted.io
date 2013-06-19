@@ -1,0 +1,179 @@
+@import 'navbar-animations';
+
+nav {
+  position: relative;
+  height: 79px;
+  width: 100%;
+
+  &.fixed {
+    width: 100%;
+    position: fixed;
+    top: 1px;
+    left: 0;
+    z-index: 2000;
+    -webkit-animation: headerAnim .3s ease-out;
+    -moz-animation: headerAnim .3s ease-out;
+    -o-animation: headerAnim .3s ease-out;
+    animation: headerAnim .3s ease-out;
+  }
+  &.fixed.fixed-after-anim {
+    top: 0px;
+  }
+
+  .pointer {
+    background-color: #000;
+    border-radius: 0 0 10px 10px;
+    padding: 16px 0 19px;
+    cursor: pointer;
+    width: 89px;
+    height: 79px;
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;;
+    right: 0;
+    top: 0;
+
+    .bar {
+      width: 39px;
+      height: 7px;
+      display: block;
+      background: #CCC;
+      margin: 0 0 9px 31px;
+      position: relative;
+    }
+
+    .circle {
+      width: 10px;
+      height: 10px;
+      background: #CCC;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      left: -15px;
+      top: -2px;
+    }
+  }
+
+  .nav {
+    display: none;
+  }
+
+  &.fixed.open {
+    background-color: #1c2025;
+    border-radius: 0;
+
+    .nav {
+      width: 960px;
+      margin: auto;
+      .el span.ico.logo {
+        background: url(../img/logo.png) no-repeat 0 0;
+        width: 72px;
+        height: 80px;
+        display: block;
+        &:before {
+          background: none;
+        }
+      }
+    }
+    .pointer {
+      display: none;
+    }
+  }
+
+  &.open {
+    background-color: #000;
+    border-radius: 0 0 10px 10px;
+
+    .nav {
+
+      -webkit-animation: menuAnim .5s ease-out;
+      -moz-animation: menuAnim .5s ease-out;
+      -o-animation: menuAnim .5s ease-out;
+      animation: menuAnim .5s ease-out;
+
+      display: block;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      .el {
+        float: left;
+        margin: 3px 0 2px 30px;
+
+        a {
+          font-family: 'Cabin', sans-serif;
+          color: #FFF;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 0.7em
+        }
+
+        span.ico.logo {
+          display: none;
+        }
+        span.ico {
+          height: 50px;
+          display: block;
+          margin: 0 auto 5px;
+          overflow: auto;
+
+          &:before {
+            content: '';
+            width: 20px;
+            height: 40px;
+            background: url(../img/labels.png) no-repeat 0 0;
+            display: block;
+            margin: 5px auto 0;
+          }
+
+          &.case-study:before {
+            margin-top: 4px;
+            height: 42px;
+            width: 46px;
+            background-position: 0 -113px;
+          }
+          &.contactus:before {
+            margin-top: 9.5px;
+            width: 43px;
+            height: 29px;
+            background-position: 0 -40px;
+          }
+          &.responsive:before {
+            margin-top: 3px;
+            height: 44px;
+            width: 23px;
+            background-position: 0 -158px;
+          }
+          &.team:before {
+            margin-top: 3.5px;
+            height: 43px;
+            width: 50px;
+            background-position: 0 -70px;
+          }
+          &.technology:before {
+            margin-top: 3px;
+            height: 46px;
+            width: 47px;
+            background-position: 0 -207px;
+          }
+        }
+      }
+    }
+  }
+
+  @media @phone {
+    .pointer {
+      -webkit-transform-origin: 0 0;
+      -moz-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      -o-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scale(0.5);
+      -moz-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+      -o-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+  }
+}
