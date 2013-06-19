@@ -30,7 +30,7 @@ a:focus {
 }
 @media (max-width: 766px) {
   .container {
-    max-width: 500px;
+    max-width: 700px;
     margin: auto;
     position: relative;
   }
@@ -438,10 +438,11 @@ nav .el span.ico.logo:before {
     background-color: #1c2025;
   }
   nav div.el {
-    margin: 10px 0 0 0px;
+    margin: 10px 0 0;
+    padding-left: 20px;
     height: 58px;
     float: none;
-    border-bottom: 1px solid #333;
+    border-bottom: 2px outset #333;
   }
   nav div.el.home {
     margin: 2px auto 0;
@@ -776,7 +777,7 @@ section#case-study .tile img.padding {
     padding: 30px 0;
   }
   section#case-study .tile {
-    width: 400px;
+    width: 600px;
     margin: auto;
   }
   section#case-study .tile .left,
@@ -833,15 +834,23 @@ section#about .overview h3 {
   margin: 10px 0 20px;
 }
 section#about .gallery {
+  margin: auto;
   background: url(../img/desktop.png);
   width: 960px;
   height: 773px;
 }
 @media (max-width: 766px) {
   section#about .gallery {
-    background: url(../img/devices.png);
-    width: 247px;
-    height: 182px;
+    background: url(../img/iphone.png);
+    width: 282px;
+    height: 549px;
+  }
+}
+@media (max-width: 767px), (min-width: 768px) and (max-width: 1024px) {
+  section#about .gallery {
+    background: url(../img/ipad.png);
+    width: 650px;
+    height: 502px;
   }
 }
 section#responsive .page {
