@@ -5,9 +5,11 @@
     <link href='http://fonts.googleapis.com/css?family=Cabin:400,700' rel='stylesheet' type='text/css'>
     <link href='css/vendors/normalize.css' rel='stylesheet' type='text/css'>
     <link href='css/main.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-<header>
+<header id="header">
     <div class="container" style="overflow: auto">
         <nav>
             <div class="pointer">
@@ -15,8 +17,52 @@
                 <span class="bar"><span class="circle"></span></span>
                 <span class="bar"><span class="circle"></span></span>
             </div>
+            <div class="nav">
+                <div class="el">
+                    <a href="#about">
+                        <span class="ico about"></span>
+                        <span class="label">who are we?</span>
+                    </a>
+                </div>
+                <div class="el">
+                    <a href="#case-study">
+                        <span class="ico case-study"></span>
+                        <span class="label">case study: brand name</span>
+                    </a>
+                </div>
+                <div class="el">
+                    <a href="#technology">
+                        <span class="ico technology"></span>
+                        <span class="label">cutting edge technology</span>
+                    </a>
+                </div>
+                <div class="el">
+                    <a href="#responsive">
+                        <span class="ico responsive"></span>
+                        <span class="label">responsive design</span>
+                    </a>
+                </div>
+                <div class="el">
+                    <a href="#team">
+                        <span class="ico team"></span>
+                        <span class="label">meet the team</span>
+                    </a>
+                </div>
+                <div class="el">
+                    <a href="#contactus">
+                        <span class="ico contactus"></span>
+                        <span class="label">contact us</span>
+                    </a>
+                </div>
+                <div class="el">
+                    <a href="#header">
+                        <span class="ico logo"></span>
+                    </a>
+                </div>
+                <div class="clear"></div>
+            </div>
         </nav>
-        <div class="logo">
+        <div id="logo">
             <span class="shape"></span>
             <span class="ico"></span>
             <span class="text">Crafted</span>
@@ -26,11 +72,12 @@
         </div>
     </div>
 </header>
-<section class="about">
+<section class="about" id="about">
     <div class="bar">
         <div class="container">
             <div class="ico-wrapper"><span class="who"></span></div>
             <span class="label">who are we?</span>
+
             <div class="clear"></div>
         </div>
     </div>
@@ -55,7 +102,7 @@
         </div>
     </div>
 </section>
-<section class="case-study">
+<section class="case-study" id="case-study">
     <div class="bar">
         <div class="container">
             <div class="ico-wrapper"><span class="chat"></span></div>
@@ -116,11 +163,12 @@
         </div>
     </div>
 </section>
-<section class="technology">
+<section class="technology" id="technology">
     <div class="bar">
         <div class="container">
             <div class="ico-wrapper"><span class="tech"></span></div>
             <span class="label">cutting edge technology</span>
+
             <div class="clear"></div>
         </div>
     </div>
@@ -137,7 +185,7 @@
         </div>
     </div>
 </section>
-<section class="responsive">
+<section class="responsive" id="responsive">
     <div class="bar">
         <div class="container">
             <div class="ico-wrapper"><span class="responsive"></span></div>
@@ -162,7 +210,7 @@
         </div>
     </div>
 </section>
-<section class="team">
+<section class="team" id="team">
     <div class="bar">
         <div class="container">
             <div class="ico-wrapper"><span class="team"></span></div>
@@ -217,7 +265,7 @@
         </div>
     </div>
 </section>
-<section class="contact">
+<section class="contactus" id="contactus">
     <div class="bar">
         <div class="container">
             <div class="ico-wrapper"><span class="contact"></span></div>

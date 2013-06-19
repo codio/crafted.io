@@ -1,59 +1,8 @@
 header {
-  background: url(/img/header_bg.jpg) no-repeat center center fixed;
+  background: url(../img/header_bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   background-size: cover;
   min-height: 390px;
-
-  nav {
-    .pointer {
-      cursor: pointer;
-      padding: 16px 0 19px;
-      width: 89px;
-      height: 79px;
-      background-color: #000;
-      border-radius: 0 0 10px 10px;
-      position: absolute;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;;
-      right: 0;
-      top: 0;
-
-      .bar {
-        width: 39px;
-        height: 7px;
-        display: block;
-        background: #CCC;
-        margin: 0 0 9px 31px;
-        position: relative;
-      }
-
-      .circle {
-        width: 10px;
-        height: 10px;
-        background: #CCC;
-        border-radius: 50%;
-        display: block;
-        position: absolute;
-        left: -15px;
-        top: -2px;
-      }
-    }
-    @media @phone {
-      .pointer {
-        -webkit-transform-origin: 0 0;
-        -moz-transform-origin: 0 0;
-        -ms-transform-origin: 0 0;
-        -o-transform-origin: 0 0;
-        transform-origin: 0 0;
-        -webkit-transform: scale(0.5);
-        -moz-transform: scale(0.5);
-        -ms-transform: scale(0.5);
-        -o-transform: scale(0.5);
-        transform: scale(0.5);
-      }
-    }
-  }
 
   .headline {
     color: #FFF;
@@ -71,7 +20,7 @@ header {
     }
   }
 
-  .logo {
+  #logo {
     width: 481px;
     height: 108px;
     -webkit-box-sizing: border-box;
@@ -95,7 +44,7 @@ header {
     }
 
     .ico {
-      background-image: url(/img/logo.png);
+      background-image: url(../img/logo.png);
       width: 72px;
       height: 80px;
       display: block;
@@ -137,4 +86,6 @@ header {
       }
     }
   }
+
+  @import '../parts/navbar';
 }
