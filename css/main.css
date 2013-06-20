@@ -1324,6 +1324,14 @@ section.case-study .tile img.block {
 section.case-study .tile img.block.tools {
   border: 0;
 }
+@media (min-width: 1024px) {
+  section.case-study .tile img.block.tablet {
+    width: 460px;
+  }
+  section.case-study .tile img.block.phone {
+    width: 220px;
+  }
+}
 section.case-study .tile blockquote {
   max-width: 480px;
   height: 700px;
