@@ -1452,42 +1452,27 @@ section.case-study .get-in-touch .button {
   text-decoration: none;
   width: 50%;
   height: 50px;
-  background: #97ce20;
-  /* Old browsers */
-
-  background: -moz-linear-gradient(top, #97ce20 0%, #6a8f1b 72%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #97ce20), color-stop(72%, #6a8f1b));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(top, #97ce20 0%, #6a8f1b 72%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(top, #97ce20 0%, #6a8f1b 72%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(top, #97ce20 0%, #6a8f1b 72%);
-  /* IE10+ */
-
-  background: linear-gradient(to bottom, #97ce20 0%, #6a8f1b 72%);
-  /* W3C */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#97ce20', endColorstr='#6a8f1b', GradientType=0);
-  border: 3px solid #77a219;
-  border-radius: 10px;
-  font-size: 30px;
+  background-color: #83A239;
+  border: 0;
+  border-radius: 6px;
   font-family: 'Muli', sans-serif;
+  font-size: 30px;
   color: #FFF;
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
-  padding: 4px 45px;
+  padding: 7px 45px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
+}
+section.case-study .get-in-touch .button:hover {
+  background-color: #55AA11;
+  transition: background-color 200ms ease;
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
 }
 section.case-study .get-in-touch .button:before {
   content: '';
