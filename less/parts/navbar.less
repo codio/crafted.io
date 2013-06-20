@@ -70,68 +70,11 @@ nav {
       text-transform: uppercase;
       font-size: 0.7em
     }
-
-    span.ico {
-      height: 50px;
-      display: block;
-      margin: 0 auto 5px;
-      overflow: auto;
-
-      &:before {
-        content: '';
-        width: 20px;
-        height: 40px;
-        background: url(../img/labels.png) no-repeat 0 0;
-        display: block;
-        margin: 5px auto 0;
-      }
-
-      &.case-study:before {
-        margin-top: 4px;
-        height: 42px;
-        width: 46px;
-        background-position: 0 -113px;
-      }
-      &.contactus:before {
-        margin-top: 9.5px;
-        width: 43px;
-        height: 29px;
-        background-position: 0 -40px;
-      }
-      &.responsive:before {
-        margin-top: 3px;
-        height: 44px;
-        width: 23px;
-        background-position: 0 -158px;
-      }
-      &.team:before {
-        margin-top: 3.5px;
-        height: 43px;
-        width: 50px;
-        background-position: 0 -70px;
-      }
-      &.technology:before {
-        margin-top: 3px;
-        height: 46px;
-        width: 47px;
-        background-position: 0 -207px;
-      }
-      &.logo {
-        width: 72px;
-        height: 80px;
-        &:before {
-          background: url(../img/logo.png) no-repeat 0 0;
-          width: 72px;
-          height: 80px;
-          margin: 0;
-        }
-      }
-    }
   }
 
   @media @desktop {
     &.fixed.open {
-      background-color: #1c2025;
+      background-color: @navigationBg;
       border-radius: 0;
 
       .nav {
@@ -170,7 +113,7 @@ nav {
     z-index: 2000;
 
     &.open {
-      background-color: #1c2025;
+      background-color: @navigationBg;
       height: auto;
       border-radius: 0 0 10px 10px;
 
@@ -178,7 +121,7 @@ nav {
         display: block;
       }
       .pointer {
-        background-color: #1c2025;
+        background-color: @navigationBg;
       }
     }
 
@@ -203,12 +146,22 @@ nav {
         height: 50px;
         width: 50px;
         margin: 0px 20px 0 0;
+
+        &.logo {
+          width: 72px;
+          height: 80px;
+        }
       }
       span.label {
         float: left;
         font-size: 14px;
         line-height: 3.6;
-        max-width: 200px;
+        max-width: 400px;
+
+        @media @phone {
+          font-size: 13px;
+          max-width: 200px;
+        }
       }
     }
 

@@ -8,25 +8,25 @@ module.exports = function(grunt) {
     less: {
       development: {
         files: {
-          'css/main.css': 'css/main.less'
+          'css/main.css': 'less/main.less'
         },
         options: {
-          paths: [ 'css/basics', 'css/pages', 'css/parts' ]
+          paths: [ 'less/basics', 'less/pages', 'less/parts' ]
         }
       },
       production: {
         files: {
-          'css/main.css': 'css/main.less'
+          'css/main.css': 'less/main.less'
         },
         options: {
-          paths: [ 'css/basics', 'css/pages', 'css/parts' ],
+          paths: [ 'less/basics', 'less/pages', 'less/parts' ],
           yuicompress: true
         }
       }
     },
 
     watch: {
-      files: 'css/**/*.less',
+      files: 'less/**/*.less',
       tasks: ['less:development']
     }
 
