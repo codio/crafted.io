@@ -1,8 +1,8 @@
 @import 'navbar-animations';
 
 nav {
-  position: relative;
-  height: 79px;
+  position: absolute;
+  height: 115px;
   width: 100%;
 
   &.fixed {
@@ -21,7 +21,7 @@ nav {
   }
 
   .pointer {
-    background-color: #000;
+    background-color: @navigationBg;
     border-radius: 0 0 10px 10px;
     padding: 16px 0 19px;
     cursor: pointer;
@@ -33,6 +33,7 @@ nav {
     box-sizing: border-box;;
     right: 0;
     top: 0;
+    z-index: 20;
 
     .bar {
       width: 39px;
@@ -62,13 +63,17 @@ nav {
   .el {
     float: left;
     margin: 3px 0 2px 30px;
+    font-family: @titleFont;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
 
     a {
       font-family: @titleFont;
       color: #FFF;
       text-decoration: none;
       text-transform: uppercase;
-      font-size: 0.7em
     }
   }
 
@@ -80,6 +85,10 @@ nav {
       .nav {
         width: 960px;
         margin: auto;
+
+        .home {
+          display: block;
+        }
       }
 
       .pointer {
@@ -88,11 +97,10 @@ nav {
     }
 
     &.open {
-      background-color: #000;
+      background-color: @navigationBg;
       border-radius: 0 0 10px 10px;
 
       .nav {
-
         -webkit-animation: menuAnim .5s ease-out;
         -moz-animation: menuAnim .5s ease-out;
         -o-animation: menuAnim .5s ease-out;
@@ -101,9 +109,28 @@ nav {
         display: block;
         margin: 0;
         padding: 0;
-        list-style: none;
+        position: relative;
+        height: 90px;
+
+        .home {
+          display: none;
+        }
+
+        .sub-nav {
+          display: block;
+          position: absolute;
+          left: 27px;
+          bottom: -10px;
+        }
       }
     }
+  }
+
+  .sub-nav {
+    display: none;
+  }
+  .el.brands .list {
+    display: none;
   }
 
   @media @smallTablet, @tablet  {
@@ -132,6 +159,14 @@ nav {
       float: none;
       border-bottom: 2px outset #333;
 
+      &.brands span.label {
+        display: none;
+      }
+      &.brands .list {
+        display: block;
+        font-size: 0.9em;
+        line-height: 5;
+      }
       &.home {
         margin: 2px auto 0;
         width: 72px;
@@ -152,7 +187,7 @@ nav {
           height: 80px;
         }
       }
-      span.label {
+      .label, .list {
         float: left;
         font-size: 14px;
         line-height: 3.6;
@@ -160,7 +195,7 @@ nav {
 
         @media @phone {
           font-size: 13px;
-          max-width: 200px;
+          max-width: 300px;
         }
       }
     }
@@ -192,6 +227,9 @@ nav {
           text-align: center;
           display: block;
           padding-top: 20px;
+        }
+        &.brands .list  {
+          line-height: 1.8;
         }
       }
     }
