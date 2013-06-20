@@ -1332,6 +1332,22 @@ section.case-study .tile img.block.tools {
     width: 220px;
   }
 }
+section.case-study .tile .tools {
+  min-width: 220px;
+  min-height: 220px;
+  background: url(../img/cogbox.png) no-repeat 0 0;
+}
+section.case-study .tile .tools ul {
+  list-style: none;
+  padding: 20px 0 0 40px;
+}
+section.case-study .tile .tools li {
+  list-style: none;
+  background: url(../img/cubebullet.png) no-repeat left top;
+  padding: 0px 0px 15px 25px;
+  color: #ccc;
+  font-weight: bold;
+}
 section.case-study .tile blockquote {
   max-width: 480px;
   height: 700px;
