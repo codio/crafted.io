@@ -49,9 +49,11 @@ $(function () {
         }
     });
 
+    $('.flexslider').flexslider({
+        animation: "slide"
+    });
 
     // Random header image
     // var classes = ['bg1', 'bg2', 'bg3', 'bg4'];
     // $('header').addClass(classes[Math.floor(Math.random() * classes.length)]);
-
 });
