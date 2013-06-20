@@ -78,20 +78,32 @@ section.case-study {
     .description {
       color: #CCC;
       padding: 17px;
-
+      position: relative;
+    
       button {
-        background-color: #EDD123;
-        border: 2px solid #A17124;
-        border-radius: 10px;
-        width: 196px;
+        position: absolute;
+        bottom: 17px;
+        right: 17px;
+        padding: 10px 24px 8px;
+        background-color: #D44E3E;
+        border: 0;
         text-transform: uppercase;
-        font-size: 23px;
+        border-radius: 6px;
         font-family: @titleFont;
-        color: #FFF;
+        color: #fff;
         font-weight: bold;
+        line-height: 1.2;
         text-align: center;
-        padding: 5px;
-        float: right;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        
+        &:hover {
+          background-color: #EE2222;
+          transition: background-color 200ms ease;
+          -webkit-transition: background-color 200ms ease;
+          -moz-transition: background-color 200ms ease;
+        }
       }
     }
 
@@ -168,7 +180,7 @@ section.case-study {
       float: left;
       line-height: 1;
     }
-
+    
     .button {
       float: right;
       display: block;
