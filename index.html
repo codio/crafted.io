@@ -4,8 +4,10 @@
     <title>Crafted test</title>
     <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
     <link href='css/vendors/normalize.css' rel='stylesheet' type='text/css'>
+    <link href='css/vendors/flexslider.css' rel='stylesheet' type='text/css'>
     <link href='css/main.css' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.flexslider.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
@@ -81,7 +83,6 @@
     </div>
     <div class="page">
         <div class="container">
-
             <div class="overview">
                 <h3>Our Approach</h3>
 
@@ -95,7 +96,24 @@
                 </p>
             </div>
             <div class="gallery">
-
+                <div class="showcase">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <img src="img/gallery/slide1.jpg"/>
+                            </li>
+                            <li>
+                                <img src="img/gallery/slide2.jpg"/>
+                            </li>
+                            <li>
+                                <img src="img/gallery/slide3.jpg"/>
+                            </li>
+                            <li>
+                                <img src="img/gallery/slide4.jpg"/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -275,7 +293,8 @@
             <form class="form" action="">
                 <fieldset>
                     <legend>
-                        <p>Write to us using the form below and we will get in touch with you quickly, or you can <a href="mailto://">email</a> us directly.</p>
+                        <p>Write to us using the form below and we will get in touch with you quickly, or you can
+                            <a href="mailto://">email</a> us directly.</p>
                     </legend>
                     <div class="fields">
                         <input placeholder="Your name.." type="text" required=""/>

@@ -31,6 +31,38 @@ section#about {
     background: url(../img/desktop.png);
     width: 960px;
     height: 773px;
+    position: relative;
+
+    .showcase {
+      width: 895px;
+      position: absolute;
+      left: 27px;
+      top: 41px;
+      background-color: #3f4850;
+
+      .flexslider {
+        margin: 0;
+      }
+    }
+  }
+
+  @media @smallTablet, @tablet {
+    .gallery {
+      background: url(../img/ipad.png);
+      width: 650px;
+      height: 502px;
+
+      .showcase {
+        width: 531px;
+        position: absolute;
+        left: 59px;
+        top: 51px;
+
+        .flexslider {
+          margin-bottom: 60px;
+        }
+      }
+    }
   }
 
   @media @phone {
@@ -38,13 +70,18 @@ section#about {
       background: url(../img/iphone.png);
       width: 282px;
       height: 549px;
-    }
-  }
-  @media @smallTablet, @tablet {
-    .gallery {
-      background: url(../img/ipad.png);
-      width: 650px;
-      height: 502px;
+
+      .showcase {
+        width: 236px;
+        height: 354px;
+        position: absolute;
+        left: 24px;
+        top: 97px;
+
+        .flexslider {
+          margin: 85px 0;
+        }
+      }
     }
   }
 
