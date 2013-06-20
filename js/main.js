@@ -8,7 +8,7 @@ $(function () {
         navigation.toggleClass('open open-with-click');
     });
 
-    navigation.find('a[href^=#]').on('click', function (event) {
+    navigation.find('a[href^=#]').add('.get-in-touch .button').on('click', function (event) {
         var winWidth = $(window).width(),
             el = $(this);
         if (!el.data('target')) el.data('target', $(this.hash));
