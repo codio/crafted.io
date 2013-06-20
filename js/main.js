@@ -19,13 +19,14 @@ $(function () {
 
         event.preventDefault();
         var tOffset = target.offset().top;
-        if (navigation.hasClass('fixed')) {
-            tOffset -= navigationHeight;
-        }
 
         if (winWidth < 1024) {
             navigation.find('.pointer').trigger('click')
+        } else {
+            tOffset -= navigationHeight;
         }
+        console.log(tOffset)
+
         scrollEl.animate({scrollTop: tOffset}, 'slow');
     });
 
