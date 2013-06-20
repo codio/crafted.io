@@ -1,2 +1,4 @@
 css/main.css
 node_modules
+node_modules
+*.sublime*
