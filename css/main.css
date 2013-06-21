@@ -1104,6 +1104,29 @@ section.case-study .block.description a {
   color: #D44E3E;
   text-decoration: none;
 }
+section.case-study .block.logo {
+  width: 460px;
+  position: relative;
+  clear: both;
+}
+section.case-study .block.logo img {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+}
+section.case-study#case-study-mea .logo img {
+  margin: -57px 0 0 -57px;
+}
+section.case-study#case-study-codio .logo img {
+  margin: -29.5px 0 0 -89px;
+}
+section.case-study#case-study-coca-cola .logo img {
+  margin: -20px 0 0 -50px;
+}
+section.case-study#case-study-netventures .logo img {
+  margin: -57px 0 0 -156.5px;
+}
 section.case-study img.block.tablet {
   width: 460px;
 }
@@ -1113,7 +1136,7 @@ section.case-study img.block.phone {
 section.case-study blockquote.block {
   width: 460px;
   padding: 20px;
-  height: 700px;
+  height: 460px;
 }
 section.case-study blockquote.block .sign {
   padding-top: 60px;

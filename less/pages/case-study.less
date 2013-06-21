@@ -75,6 +75,34 @@ section.case-study {
         text-decoration: none;
       }
     }
+
+    &.logo {
+      width: 460px;
+      position: relative;
+//      float: none;
+//      background: transparent;
+      clear: both;
+
+      img {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+      }
+    }
+  }
+
+  &#case-study-mea .logo img {
+    margin: -57px 0 0 -57px;
+  }
+  &#case-study-codio .logo img {
+    margin: -29.5px 0 0 -89px;
+  }
+  &#case-study-coca-cola .logo img {
+    margin: -20px 0 0 -50px;
+  }
+  &#case-study-netventures .logo img {
+    margin: -57px 0 0 -156.5px;
   }
 
   img.block {
@@ -90,7 +118,7 @@ section.case-study {
   blockquote.block {
     width: 460px;
     padding: 20px;
-    height: 700px;
+    height: 460px;
     .sign {
       padding-top: 60px;
     }
