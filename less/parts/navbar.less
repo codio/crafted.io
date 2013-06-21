@@ -3,8 +3,30 @@
 nav {
   @navigationBg: rgba(28, 32, 37, 0.8);
   position: absolute;
-  height: 80px;
+  height: 70px;
   width: 100%;
+  right: 0;
+
+  .nav {
+    display: none;
+  }
+
+  .el {
+    float: left;
+    margin: 10px 20px 2px 0;
+    font-family: @titleFont;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 10px;
+
+    a {
+      font-family: @titleFont;
+      color: #FFF;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
 
   &.fixed {
     width: 100%;
@@ -24,10 +46,10 @@ nav {
   .pointer {
     background-color: @navigationBg;
     border-radius: 0 0 10px 10px;
-    padding: 16px 0 19px;
+    padding: 10px 0 19px;
     cursor: pointer;
     width: 89px;
-    height: 79px;
+    height: 70px;
     position: absolute;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -57,34 +79,16 @@ nav {
     }
   }
 
-  .nav {
-    display: none;
-  }
 
-  .el {
-    float: left;
-    margin: 3px 0 2px 30px;
-    font-family: @titleFont;
-    color: #FFF;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 10px;
 
-    a {
-      font-family: @titleFont;
-      color: #FFF;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-  }
-
-  @media @desktop {
+  @media (min-width: 650px) {
     &.fixed.open {
       background-color: @navigationBg;
       border-radius: 0;
+      width: 100%;
+      height: 70px;
 
       .nav {
-        width: 960px;
         margin: auto;
 
         .home {
@@ -100,6 +104,7 @@ nav {
     &.open {
       background-color: @navigationBg;
       border-radius: 0 0 10px 10px;
+      width: 650px;
 
       .nav {
         -webkit-animation: menuAnim .5s ease-out;
@@ -108,10 +113,11 @@ nav {
         animation: menuAnim .5s ease-out;
 
         display: block;
-        margin: 0;
+        margin: auto;
         padding: 0;
         position: relative;
         height: 90px;
+        width: 600px;
 
         .home {
           display: none;
@@ -127,14 +133,7 @@ nav {
     }
   }
 
-  .sub-nav {
-    display: none;
-  }
-  .el.brands .list {
-    display: none;
-  }
-
-  @media @smallTablet, @tablet  {
+  @media (max-width: 649px)  {
     position: fixed;
     top: 0;
     left: 0;
@@ -168,12 +167,6 @@ nav {
         font-size: 0.9em;
         line-height: 5;
       }
-      &.home {
-        margin: 2px auto 0;
-        width: 72px;
-        height: 80px;
-        border-bottom: 0;
-      }
       span.ico.logo {
         display: block;
       }
@@ -182,11 +175,6 @@ nav {
         height: 50px;
         width: 50px;
         margin: 0px 20px 0 0;
-
-        &.logo {
-          width: 72px;
-          height: 80px;
-        }
       }
       .label, .list {
         float: left;
@@ -202,20 +190,15 @@ nav {
     }
 
     @media (max-height: 480px) {
-      padding-top: 70px;
+      padding-top: 50px;
 
       div.el {
-        margin: 15px 0 0 15px;
-        width: 70px;
+        width: 50%;
         float: left;
         height: 100px;
         border-bottom: 1px solid #333;
-
-        &.home {
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
+        padding: 0;
+        margin: 0;
 
         span.ico {
           float: none;
@@ -227,7 +210,6 @@ nav {
           line-height: 1;
           text-align: center;
           display: block;
-          padding-top: 20px;
         }
         &.brands .list  {
           line-height: 1.8;

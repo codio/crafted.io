@@ -1,4 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300|Muli:300,400);
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot');
+  src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('../fonts/icomoon.woff') format('woff'), url('../fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -596,62 +603,58 @@ a:focus {
   }
 }
 span.ico {
-  height: 50px;
+  height: 32px;
+  width: 32px;
   display: block;
   margin: 0 auto 5px;
-  overflow: auto;
   position: relative;
 }
 span.ico:before {
-  content: '';
-  width: 20px;
-  height: 40px;
-  background: url(../img/labels.png) no-repeat 0 0;
-  display: block;
+  width: 32px;
+  height: 32px;
+  content: "\e000";
   position: absolute;
-  left: 50%;
   top: 50%;
-  margin: -20px 0 0 -10px;
+  left: 50%;
+  text-align: center;
+  margin-top: -16px;
+  margin-left: -16px;
+  color: #fff;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 32px;
+  -webkit-font-smoothing: antialiased;
 }
 span.ico.case-study:before {
-  margin: -21px 0 0 -23px;
-  height: 42px;
-  width: 46px;
-  background-position: 0 -113px;
+  content: "\e00c";
 }
 span.ico.contactus:before {
-  margin: -14.5px 0 0 -21.5px;
-  height: 29px;
-  width: 43px;
-  background-position: 0 -40px;
+  content: "\e009";
 }
 span.ico.responsive:before {
-  margin: -22px 0 0 -11.5px;
-  height: 44px;
-  width: 23px;
-  background-position: 0 -158px;
+  content: "\e005";
 }
 span.ico.team:before {
-  margin: -21.5px 0 0 -25px;
-  height: 43px;
-  width: 50px;
-  background-position: 0 -70px;
+  content: "\e007";
 }
 span.ico.technology:before {
-  margin: -23px 0 0 -23.5px;
-  height: 46px;
-  width: 47px;
-  background-position: 0 -207px;
+  content: "\e001";
 }
 span.ico.logo {
-  width: 72px;
-  height: 80px;
+  width: 32px;
+  height: 32px;
 }
 span.ico.logo:before {
+  content: "";
   background: url(../img/logo.png) no-repeat 0 0;
-  height: 80px;
-  width: 72px;
-  margin: -40px 0 0 -36px;
+  background-size: 32px 36px;
+  height: 32px;
+  width: 36px;
 }
 div.bar {
   height: 46px;
@@ -826,8 +829,27 @@ header #logo img {
 }
 nav {
   position: absolute;
-  height: 80px;
+  height: 70px;
   width: 100%;
+  right: 0;
+}
+nav .nav {
+  display: none;
+}
+nav .el {
+  float: left;
+  margin: 10px 20px 2px 0;
+  font-family: 'Muli', sans-serif;
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+nav .el a {
+  font-family: 'Muli', sans-serif;
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 nav.fixed {
   width: 100%;
@@ -846,10 +868,10 @@ nav.fixed.fixed-after-anim {
 nav .pointer {
   background-color: rgba(28, 32, 37, 0.8);
   border-radius: 0 0 10px 10px;
-  padding: 16px 0 19px;
+  padding: 10px 0 19px;
   cursor: pointer;
   width: 89px;
-  height: 79px;
+  height: 70px;
   position: absolute;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -876,31 +898,14 @@ nav .pointer .circle {
   left: -15px;
   top: -2px;
 }
-nav .nav {
-  display: none;
-}
-nav .el {
-  float: left;
-  margin: 3px 0 2px 30px;
-  font-family: 'Muli', sans-serif;
-  color: #FFF;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 10px;
-}
-nav .el a {
-  font-family: 'Muli', sans-serif;
-  color: #FFF;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-@media (min-width: 1024px) {
+@media (min-width: 650px) {
   nav.fixed.open {
     background-color: rgba(28, 32, 37, 0.8);
     border-radius: 0;
+    width: 100%;
+    height: 70px;
   }
   nav.fixed.open .nav {
-    width: 960px;
     margin: auto;
   }
   nav.fixed.open .nav .home {
@@ -912,6 +917,7 @@ nav .el a {
   nav.open {
     background-color: rgba(28, 32, 37, 0.8);
     border-radius: 0 0 10px 10px;
+    width: 650px;
   }
   nav.open .nav {
     -webkit-animation: menuAnim 0.5s ease-out;
@@ -919,10 +925,11 @@ nav .el a {
     -o-animation: menuAnim 0.5s ease-out;
     animation: menuAnim 0.5s ease-out;
     display: block;
-    margin: 0;
+    margin: auto;
     padding: 0;
     position: relative;
     height: 90px;
+    width: 600px;
   }
   nav.open .nav .home {
     display: none;
@@ -934,13 +941,7 @@ nav .el a {
     bottom: -10px;
   }
 }
-nav .sub-nav {
-  display: none;
-}
-nav .el.brands .list {
-  display: none;
-}
-@media (max-width: 767px), (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 649px) {
   nav {
     position: fixed;
     top: 0;
@@ -973,12 +974,6 @@ nav .el.brands .list {
     font-size: 0.9em;
     line-height: 5;
   }
-  nav div.el.home {
-    margin: 2px auto 0;
-    width: 72px;
-    height: 80px;
-    border-bottom: 0;
-  }
   nav div.el span.ico.logo {
     display: block;
   }
@@ -988,10 +983,6 @@ nav .el.brands .list {
     width: 50px;
     margin: 0px 20px 0 0;
   }
-  nav div.el span.ico.logo {
-    width: 72px;
-    height: 80px;
-  }
   nav div.el .label,
   nav div.el .list {
     float: left;
@@ -1000,28 +991,24 @@ nav .el.brands .list {
     max-width: 400px;
   }
 }
-@media (max-width: 767px) and (max-width: 766px), (min-width: 768px) and (max-width: 1023px) and (max-width: 766px) {
+@media (max-width: 649px) and (max-width: 766px) {
   nav div.el .label,
   nav div.el .list {
     font-size: 13px;
     max-width: 300px;
   }
 }
-@media (max-width: 767px) and (max-height: 480px), (min-width: 768px) and (max-width: 1023px) and (max-height: 480px) {
+@media (max-width: 649px) and (max-height: 480px) {
   nav {
-    padding-top: 70px;
+    padding-top: 50px;
   }
   nav div.el {
-    margin: 15px 0 0 15px;
-    width: 70px;
+    width: 50%;
     float: left;
     height: 100px;
     border-bottom: 1px solid #333;
-  }
-  nav div.el.home {
-    position: absolute;
-    top: 0;
-    left: 0;
+    padding: 0;
+    margin: 0;
   }
   nav div.el span.ico {
     float: none;
@@ -1033,7 +1020,6 @@ nav .el.brands .list {
     line-height: 1;
     text-align: center;
     display: block;
-    padding-top: 20px;
   }
   nav div.el.brands .list {
     line-height: 1.8;

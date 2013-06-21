@@ -1,6 +1,7 @@
 $(function () {
     var navigation = $('header nav'),
         navigationHeight = navigation.height(),
+        minScreenSize = 650,
         scrollEl = $('html,body');
 
 
@@ -20,12 +21,11 @@ $(function () {
         event.preventDefault();
         var tOffset = target.offset().top;
 
-        if (winWidth < 1024) {
+        if (winWidth < minScreenSize) {
             navigation.find('.pointer').trigger('click')
         } else {
             tOffset -= navigationHeight;
         }
-        console.log(tOffset)
 
         scrollEl.animate({scrollTop: tOffset}, 'slow');
     });
@@ -34,7 +34,7 @@ $(function () {
         var winWidth = $(window).width(),
             position = $(document).scrollTop();
 
-        if (winWidth < 1024) return;
+        if (winWidth < minScreenSize) return;
 
         if (position >= navigationHeight && !navigation.hasClass('fixed')) {
             navigation.addClass('open fixed');
@@ -48,9 +48,5 @@ $(function () {
                 navigation.removeClass('open');
             }
         }
-    });
-
-    $('.flexslider').flexslider({
-        animation: "slide"
     });
 });

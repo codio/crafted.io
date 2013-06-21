@@ -41,62 +41,59 @@ a, a:hover, a:active, a:focus {
 }
 
 span.ico {
-  height: 50px;
+  height: 32px;
+  width: 32px;
   display: block;
   margin: 0 auto 5px;
-  overflow: auto;
   position: relative;
 
   &:before {
-    content: '';
-    width: 20px;
-    height: 40px;
-    background: url(../img/labels.png) no-repeat 0 0;
-    display: block;
+    width: 32px;
+    height: 32px;
+    content: "\e000";
     position: absolute;
-    left: 50%;
     top: 50%;
-    margin: -20px 0 0 -10px;
+    left: 50%;
+    text-align: center;
+    margin-top: -16px;
+    margin-left: -16px;
+    color: #fff;
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-size: 32px;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 32px;
+    -webkit-font-smoothing: antialiased;
   }
 
   &.case-study:before {
-    margin: -21px 0 0 -23px;
-    height: 42px;
-    width: 46px;
-    background-position: 0 -113px;
+    content: "\e00c";
   }
   &.contactus:before {
-    margin: -14.5px 0 0 -21.5px;
-    height: 29px;
-    width: 43px;
-    background-position: 0 -40px;
+    content: "\e009";
   }
   &.responsive:before {
-    margin: -22px 0 0 -11.5px;
-    height: 44px;
-    width: 23px;
-    background-position: 0 -158px;
+    content: "\e005";
   }
   &.team:before {
-    margin: -21.5px 0 0 -25px;
-    height: 43px;
-    width: 50px;
-    background-position: 0 -70px;
+    content: "\e007";
   }
   &.technology:before {
-    margin: -23px 0 0 -23.5px;
-    height: 46px;
-    width: 47px;
-    background-position: 0 -207px;
+    content: "\e001";
   }
   &.logo {
-    width: 72px;
-    height: 80px;
+    width: 32px;
+    height: 32px;
     &:before {
+      content: "";
       background: url(../img/logo.png) no-repeat 0 0;
-      height: 80px;
-      width: 72px;
-      margin: -40px 0 0 -36px;
+      background-size: 32px 36px;
+      height: 32px;
+      width: 36px;
     }
   }
 }
