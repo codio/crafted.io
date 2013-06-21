@@ -877,6 +877,9 @@ section#team .members {
   margin: 0;
   padding: 110px 0px 160px;
 }
+section#team .members .member:first-child {
+  margin-left: 0;
+}
 section#team .members .member {
   float: left;
   width: 220px;
@@ -910,7 +913,13 @@ section#team .members .member .overview {
   font-style: italic;
   line-height: 1.2;
 }
-@media (max-width: 600px) {
+@media (max-width: 767px) {
+  section#team .members .member {
+    margin: 0 auto 20px;
+    float: none;
+  }
+}
+@media (max-width: 466px) {
   section#team .members .member {
     margin: 0 auto 20px;
     float: none;
@@ -1209,12 +1218,12 @@ section.case-study blockquote.block .sign {
 }
 section#about .page {
   background-color: #f9f5f1;
-  padding: 64px 0 128px;
+  padding: 64px 0 1px;
 }
 section#about .overview {
   border-radius: 15px;
   padding: 15px;
-  margin-bottom: 107px;
+  margin-bottom: 60px;
   color: #999390;
   line-height: 1.5;
 }
