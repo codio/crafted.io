@@ -710,6 +710,7 @@ nav .pointer .circle {
   }
   nav.fixed.open .nav .home {
     display: block;
+    margin-right: 35px;
   }
   nav.fixed.open .pointer {
     display: none;
