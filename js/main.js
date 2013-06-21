@@ -7,7 +7,6 @@ $(function () {
 
     navigation.find('.pointer').on('click', function () {
         navigation.toggleClass('open open-with-click');
-        console.log(navigation[0].className)
     });
 
     navigation.find('a[href^=#]').add('.get-in-touch .button').on('click', function (event) {
