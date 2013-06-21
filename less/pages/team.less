@@ -9,7 +9,7 @@ section#team {
   .members {
     list-style: none;
     margin: 0;
-    padding: 110px 0px 160px;
+    padding: 110px 0px 120px;
 
     .member {
       float: left;
@@ -17,11 +17,18 @@ section#team {
       margin: 0 0 20px 20px;
 
       .photo {
-        border: 5px solid #000;
+        border: 1px solid #444;
         position: relative;
         height: 210px;
         width: 210px;
         margin-bottom: 23px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 1px 14px #333;
+
+        img {
+          border-radius: 50%;
+        }
 
         span {
           display: block;
@@ -38,13 +45,11 @@ section#team {
 
       .overview {
         position: relative;
-        padding: 10px;
+        padding: 16px;
         z-index: 1;
         font-size: @smallFontSize;
-        font-family: @mainFont;
-        color: #fff;
-        font-style: italic;
-        line-height: 1.2;
+        color: #ddd;
+        line-height: 1.5;
       }
     }
 
