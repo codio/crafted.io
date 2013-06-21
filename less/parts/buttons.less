@@ -1,0 +1,39 @@
+.button {
+  display: block;
+  padding: 7px 15px;
+  border: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: @titleFont;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 30px;
+
+  &.red {
+    background-color: #D44E3E;
+
+    &:hover {
+      background-color: saturate(#D44E3E, 15%) ;//#EE2222;
+      transition: background-color 200ms ease;
+      -webkit-transition: background-color 200ms ease;
+      -moz-transition: background-color 200ms ease;
+    }
+  }
+
+  &.green {
+    background-color: #83A239;
+
+    &:hover {
+      background-color: saturate(#83A239, 10%);//#55AA11;
+      transition: background-color 200ms ease;
+      -webkit-transition: background-color 200ms ease;
+      -moz-transition: background-color 200ms ease;
+    }
+  }
+}

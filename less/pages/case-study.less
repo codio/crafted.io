@@ -62,30 +62,9 @@ section.case-study {
       position: relative;
       font-size: 20px;
 
-      button {
-        position: absolute;
-        bottom: 17px;
-        right: 17px;
-        padding: 10px 24px 8px;
-        background-color: #D44E3E;
-        border: 0;
-        text-transform: uppercase;
-        border-radius: 6px;
-        font-family: @titleFont;
-        color: #fff;
-        font-weight: bold;
-        line-height: 1.2;
-        text-align: center;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-
-        &:hover {
-          background-color: #EE2222;
-          transition: background-color 200ms ease;
-          -webkit-transition: background-color 200ms ease;
-          -moz-transition: background-color 200ms ease;
-        }
+      a {
+        color: #D44E3E;
+        text-decoration: none;
       }
     }
   }
@@ -163,33 +142,10 @@ section.case-study {
 
   .button {
     float: right;
-    display: block;
-    text-decoration: none;
-    width: 50%;
+    width: 450px;
     height: 50px;
-    background-color: #83A239;
-    border: 0;
-    text-transform: uppercase;
-    border-radius: 6px;
-    font-family: @titleFont;
-    font-size: 30px;
-    color: #FFF;
-    font-weight: bold;
-    line-height: 1.2;
-    text-align: center;
-    text-transform: uppercase;
     padding: 7px 45px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     position: relative;
-
-    &:hover {
-      background-color: #55AA11;
-      transition: background-color 200ms ease;
-      -webkit-transition: background-color 200ms ease;
-      -moz-transition: background-color 200ms ease;
-    }
 
     &:before {
       content: '';
@@ -202,25 +158,15 @@ section.case-study {
       top: 50%;
       margin-top: -14px;
     }
+  }
 
-    .button {
-      float: right;
-      display: block;
-      text-decoration: none;
-      width: 50%;
-      height: 50px;
-      background-color: #83A239;
-      border: 0;
-      text-transform: uppercase;
-      border-radius: 6px;
-      font-family: @titleFont;
-      font-size: 30px;
-      color: #FFF;
-      font-weight: bold;
-      line-height: 1.2;
-    }
+    @media @smallTablet {
+      p, .button {
+        width: 80%;
+        float: none;
+        margin: auto;
+      }
 
-    @media @phone {
       p {
         text-align: center;
         text-transform: uppercase;
@@ -230,36 +176,12 @@ section.case-study {
         box-sizing: border-box;
         position: relative;
 
-        &:hover {
-          background-color: #55AA11;
-          transition: background-color 200ms ease;
-          -webkit-transition: background-color 200ms ease;
-          -moz-transition: background-color 200ms ease;
-        }
-
-        &:before {
-          content: '';
-          background: url(../img/arrow-down.png);
-          width: 21px;
-          height: 27px;
-          display: block;
-          position: absolute;
-          right: 20px;
-          top: 50%;
-          margin-top: -14px;
-        }
         margin-bottom: 20px;
       }
 
-      p, .button {
-        width: 100%;
-        float: none;
-      }
-
       .button {
-        line-height: 1.5;
-        font-size: 1.5em;
+        line-height: 1.8;
+        font-size: 1.3em;
       }
     }
-  }
 }
