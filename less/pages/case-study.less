@@ -1,4 +1,11 @@
 section.case-study {
+
+  @media @smallPhone {
+    .bar .label {
+      font-size: 0.9em;
+      line-height: 2.9;
+    }
+  }
   .page {
     background-color: #3F4850;
     padding: 66px 0px 90px;
@@ -51,7 +58,6 @@ section.case-study {
         background: url(../img/cubebullet.png) no-repeat left top;
         padding: 0px 0px 15px 25px;
         color: #999;
-        font-size: 20px;
       }
     }
 
@@ -60,7 +66,6 @@ section.case-study {
       line-height: 1.5em;
       padding: 17px;
       position: relative;
-      font-size: 20px;
 
       a {
         color: #D44E3E;
@@ -131,7 +136,7 @@ section.case-study {
   }
 
   p {
-    font-size: 25px;
+    font-size: @bigFontSize;
     margin: 0;
     font-family: @titleFont;
     color: #fff;
@@ -178,10 +183,12 @@ section.case-study {
 
         margin-bottom: 20px;
       }
+    }
 
+    @media @phone {
       .button {
         line-height: 1.8;
-        font-size: 1.3em;
+        font-size: @mediumFontSize;
       }
     }
 }

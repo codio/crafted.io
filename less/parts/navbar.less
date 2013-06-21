@@ -18,7 +18,7 @@ nav {
     color: #FFF;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: @tinyFontSize;
 
     a {
       font-family: @titleFont;
@@ -178,12 +178,11 @@ nav {
       }
       .label, .list {
         float: left;
-        font-size: 14px;
+        font-size: 1.4em;
         line-height: 3.6;
         max-width: 400px;
 
         @media @phone {
-          font-size: 13px;
           max-width: 300px;
         }
       }
@@ -206,7 +205,6 @@ nav {
         }
         span.label {
           float: none;
-          font-size: 10px;
           line-height: 1;
           text-align: center;
           display: block;
