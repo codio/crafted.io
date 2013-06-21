@@ -928,11 +928,19 @@ section#technology .page {
 }
 section#technology .overview {
   color: #ddd;
-  padding: 30px 50px 0 505px;
+  padding: 30px 50px 0;
   line-height: 1.46;
   position: relative;
   z-index: 1;
   min-height: 390px;
+}
+section#technology .overview .content {
+  width: 50%;
+  float: right;
+}
+section#technology .overview img {
+  float: left;
+  padding-right: 75px;
 }
 section#technology .overview .shade {
   background-color: #000000;
@@ -945,9 +953,15 @@ section#technology .overview .shade {
   position: absolute;
   z-index: -1;
 }
-@media (max-width: 600px) {
-  section#technology .overview {
-    padding: 20px;
+@media (max-width: 767px) {
+  section#technology .overview .content {
+    width: 100%;
+  }
+  section#technology .overview img {
+    padding: 0 0 10px;
+    float: none;
+    margin: auto;
+    display: block;
   }
 }
 section#contactus .page {
@@ -1307,17 +1321,20 @@ section#responsive .overview .content {
   color: #ddd;
   line-height: 1.46;
   float: left;
-  max-width: 405px;
+  width: 50%;
 }
 section#responsive .overview img {
   padding: 30px 0 0 48px;
   float: left;
 }
-@media (max-width: 600px) {
+@media (max-width: 767px) {
+  section#responsive .overview .content {
+    width: 100%;
+  }
   section#responsive .overview img {
     padding: 0;
     float: none;
-    margin-left: -20px;
-    width: 100%;
+    margin: auto;
+    display: block;
   }
 }
