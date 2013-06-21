@@ -2,8 +2,8 @@ section.case-study {
 
   @media @smallPhone {
     .bar .label {
-      font-size: 0.9em;
-      line-height: 2.9;
+      font-size: 0.8em;
+      line-height: 3;
     }
   }
   .page {
@@ -51,12 +51,12 @@ section.case-study {
       background: #242424;
       ul {
         list-style: none;
-        padding: 20px 0 0 40px;
+        padding: 15px 0 0 40px;
       }
       li {
         list-style: none;
-        background: url(../img/cubebullet.png) no-repeat left top;
-        padding: 0px 0px 15px 25px;
+        background: url(../img/cubebullet.png) no-repeat 0 5px;
+        padding: 0px 0px 15px 30px;
         color: #999;
       }
     }
@@ -107,9 +107,27 @@ section.case-study {
       margin: auto;
     }
 
+    img.block {
+      &.tablet {
+        display: none;
+      }
+
+      &.phone {
+        width: 32%;
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        &.padding {
+          margin-left: 2%;
+          margin-right: 2%;
+        }
+      }
+    }
+
     .block {
       width: 100%;
-      margin: 5px auto;
+      margin: 15px auto;
       float: none;
     }
 
@@ -118,8 +136,18 @@ section.case-study {
       height: auto;
     }
 
+  }
+
+  @media @phone {
     img.block {
-      max-width: 100%;
+      &.tablet {
+        max-width: 100%;
+        display: block;
+      }
+
+      &.phone {
+        display: none;
+      }
     }
   }
 }
@@ -165,30 +193,36 @@ section.case-study {
     }
   }
 
-    @media @smallTablet {
-      p, .button {
-        width: 80%;
-        float: none;
-        margin: auto;
-      }
-
-      p {
-        text-align: center;
-        text-transform: uppercase;
-        padding: 7px 45px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        position: relative;
-
-        margin-bottom: 20px;
-      }
+  @media @smallTablet, @tablet {
+    p, .button {
+      float: none;
+      margin: auto;
     }
 
-    @media @phone {
-      .button {
-        line-height: 1.8;
-        font-size: @mediumFontSize;
-      }
+    p {
+      width: 80%;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 7px 45px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      position: relative;
+
+      margin-bottom: 20px;
     }
+  }
+
+  @media @phone {
+    p {
+      display: none;
+    }
+
+    .button {
+      width: 80%;
+      line-height: 1.8;
+      font-size: @mediumFontSize;
+    }
+  }
+
 }
