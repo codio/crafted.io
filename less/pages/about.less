@@ -2,14 +2,19 @@ section#about {
   .page {
     background-color: #f9f5f1;
     padding: 64px 0 1px;
+
+    .mobile-page
   }
 
   .overview {
     border-radius: 15px;
     padding: 15px;
-    margin-bottom: 60px;
     color: #999390;
     line-height: 1.5;
+
+    @media @desktop {
+      margin-bottom: 60px;
+    }
 
     h3 {
       color: #666;

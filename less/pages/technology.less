@@ -5,10 +5,11 @@ section#technology {
     -webkit-background-size: cover;
     background-size: cover;
     padding: 90px 20px;
+
+    .mobile-page
   }
 
   .overview {
-    color: #ddd;
     padding: 30px 50px 0;
     line-height: 1.46;
     position: relative;
@@ -16,6 +17,7 @@ section#technology {
     min-height: 390px;
 
     .content {
+      color: #ddd;
       width: 50%;
       float: right;
     }
@@ -28,10 +30,15 @@ section#technology {
     }
 
     @media @smallTablet, @tablet {
+      padding: 20px;
+
       .content {
         width: 100%;
       }
+
       img {
+        width: 100%;
+        max-width: 318px;
         padding: 0 0 10px;
         float: none;
         margin: auto;

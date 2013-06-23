@@ -11,14 +11,6 @@ section.case-study {
     padding: 66px 0px 90px;
   }
 
-  &#case-study-mea {
-    @media @desktop {
-      .description {
-        width: 460px;
-      }
-    }
-  }
-
   .tile {
     .left {
       float: left;
@@ -79,8 +71,8 @@ section.case-study {
     &.logo {
       width: 460px;
       position: relative;
-//      float: none;
-//      background: transparent;
+      //      float: none;
+      //      background: transparent;
       clear: both;
 
       img {
@@ -99,10 +91,38 @@ section.case-study {
     margin: -49.5px 0 0 -130px;
   }
   &#case-study-coca-cola .logo img {
-    margin: -31.5px 0 0 -80px;
+    margin: -110px 0 0 -230px;
   }
   &#case-study-netventures .logo img {
-    margin: -57px 0 0 -156.5px;
+    margin: -70px 0 0 -156.5px;
+  }
+
+  @media (min-width: 980px) {
+    &#case-study-mea {
+      .description {
+        width: 460px;
+      }
+    }
+  }
+
+  @media @desktop {
+    &#case-study-codio {
+      blockquote {
+        padding-top: 107px;
+      }
+    }
+
+    &#case-study-mea {
+      blockquote {
+        padding-top: 123px;
+      }
+    }
+
+    &#case-study-netventures {
+      blockquote {
+        padding-top: 60px;
+      }
+    }
   }
 
   img.block {

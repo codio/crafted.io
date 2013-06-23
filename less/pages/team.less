@@ -5,6 +5,9 @@ section#team {
     -webkit-background-size: cover;
     background-size: cover;
     padding: 50px 0px;
+    .container {
+      padding: 0 20px;
+    }
   }
 
   .members {
@@ -14,14 +17,14 @@ section#team {
     .member {
       float: left;
       width: 220px;
-      margin: 0 0 20px 20px;
+      margin: 0 10px 20px;
 
       .photo {
         border: 1px solid #444;
         position: relative;
         height: 210px;
         width: 210px;
-        margin-bottom: 23px;
+        margin-bottom: 25px;
         border-radius: 50%;
         overflow: hidden;
         box-shadow: 0 1px 14px #333;
@@ -30,16 +33,17 @@ section#team {
           border-radius: 50%;
         }
 
-        span {
-          display: block;
+        .label {
           position: absolute;
           bottom: 0;
           text-align: center;
           width: 100%;
-          background-color: #000;
-          opacity: 0.5;
           color: #FFF;
           line-height: 1.5;
+          z-index: 1;
+          .shade {
+            .shade(0, #000, 0.5)
+          }
         }
       }
     }
