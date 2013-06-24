@@ -178,8 +178,11 @@ blockquote {
 }
 
 .shade (@radius: 10px, @color: #000, @opacity: 0.7) {
+  @ieOpacity: @opacity * 100;
   background-color: @color;
   opacity: @opacity;
+  filter: alpha(opacity=@ieOpacity);
+
   border-radius: @radius;
   width: 100%;
   height: 100%;
