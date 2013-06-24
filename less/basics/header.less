@@ -1,5 +1,14 @@
 header {
-  background: #000 url(../img/header-bg.jpg) no-repeat 0 -269px fixed;
+  background: #000 url(../img/header_bg.jpg) no-repeat 0 -269px fixed;
+
+  @media @tablet {
+    background-image: url(../img/header_bg_tablet.jpg);
+  }
+
+  @media @smallTablet {
+    background-image: url(../img/header_bg_mobile.jpg);
+  }
+
   min-height: 390px;
 
   .container {
