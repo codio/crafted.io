@@ -1,8 +1,8 @@
 @import 'navbar-animations';
 
 nav {
-//  background-color: #000;
-  @navigationBg: rgba(28, 32, 37, 0.8);
+  @transparentBg: fade(@navigationBg, 80%);
+
   position: absolute;
   height: 70px;
   width: 100%;
@@ -39,13 +39,15 @@ nav {
     -moz-animation: headerAnim .3s ease-out;
     -o-animation: headerAnim .3s ease-out;
     animation: headerAnim .3s ease-out;
-  }
-  &.fixed.fixed-after-anim {
-    top: 0px;
+
+    &.fixed-after-anim {
+      top: 0px;
+    }
   }
 
   .pointer {
     background-color: @navigationBg;
+    background-color: @transparentBg;
     border-radius: 0 0 10px 10px;
     padding: 10px 0 19px;
     cursor: pointer;
@@ -80,62 +82,59 @@ nav {
     }
   }
 
+  &.fixed.open {
+    background-color: @navigationBg;
+    background-color: @transparentBg;
+    border-radius: 0;
+    width: 100%;
+    height: 70px;
 
+    .nav {
+      margin: auto;
 
-  @media (min-width: 650px) {
-    &.fixed.open {
-      background-color: @navigationBg;
-      border-radius: 0;
-      width: 100%;
-      height: 70px;
-
-      .nav {
-        margin: auto;
-
-        .home {
-          display: block;
-          margin-right: 35px;
-        }
-      }
-
-      .pointer {
-        display: none;
+      .home {
+        display: block;
+        margin-right: 35px;
       }
     }
 
-    &.open {
-      background-color: @navigationBg;
-      border-radius: 0 0 10px 10px;
-      width: 650px;
+    .pointer {
+      display: none;
+    }
+  }
 
-      .nav {
-        -webkit-animation: menuAnim .5s ease-out;
-        -moz-animation: menuAnim .5s ease-out;
-        -o-animation: menuAnim .5s ease-out;
-        animation: menuAnim .5s ease-out;
+  &.open {
+    background-color: @navigationBg;
+    border-radius: 0 0 10px 10px;
+    width: 650px;
 
+    .nav {
+      -webkit-animation: menuAnim .5s ease-out;
+      -moz-animation: menuAnim .5s ease-out;
+      -o-animation: menuAnim .5s ease-out;
+      animation: menuAnim .5s ease-out;
+
+      display: block;
+      margin: auto;
+      padding: 0;
+      position: relative;
+      height: 90px;
+      width: 600px;
+
+      .home {
+        display: none;
+      }
+
+      .sub-nav {
         display: block;
-        margin: auto;
-        padding: 0;
-        position: relative;
-        height: 90px;
-        width: 600px;
-
-        .home {
-          display: none;
-        }
-
-        .sub-nav {
-          display: block;
-          position: absolute;
-          left: 27px;
-          bottom: -10px;
-        }
+        position: absolute;
+        left: 27px;
+        bottom: -10px;
       }
     }
   }
 
-  @media (max-width: 649px)  {
+  @media (max-width: 660px) {
     position: fixed;
     top: 0;
     left: 0;
@@ -143,14 +142,24 @@ nav {
 
     &.open {
       background-color: @navigationBg;
+      background-color: @transparentBg;
       height: auto;
       border-radius: 0 0 10px 10px;
+      width: auto;
 
       .nav {
         display: block;
+        width: auto;
+        height: auto;
+
+        .home {
+          display: block;
+        }
       }
+
       .pointer {
         background-color: @navigationBg;
+        background-color: @transparentBg;
       }
     }
 
@@ -211,7 +220,7 @@ nav {
           text-align: center;
           display: block;
         }
-        &.brands .list  {
+        &.brands .list {
           line-height: 1.8;
         }
       }

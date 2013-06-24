@@ -1,5 +1,5 @@
 $(function () {
-    var navigation = $('#header nav'),
+    var navigation = $('#main-nav'),
         navigationHeight = navigation.height(),
         minScreenSize = 650,
         scrollEl = $('html,body');
