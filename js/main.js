@@ -22,7 +22,7 @@ $(function () {
         var tOffset = target.offset().top;
 
         if (winWidth < minScreenSize) {
-            navigation.find('.pointer').trigger('click')
+            navigation.hasClass('open') && navigation.find('.pointer').trigger('click')
         } else {
             tOffset -= navigationHeight;
         }

@@ -30,7 +30,6 @@ nav {
   }
 
   &.fixed {
-    width: 100%;
     position: fixed;
     top: 1px;
     left: 0;
@@ -87,7 +86,6 @@ nav {
     background-color: @transparentBg;
     border-radius: 0;
     width: 100%;
-    height: 70px;
 
     .nav {
       margin: auto;
@@ -139,8 +137,9 @@ nav {
     top: 0;
     left: 0;
     z-index: 2000;
+    height: auto;
 
-    &.open {
+    &.open, &.fixed.open {
       background-color: @navigationBg;
       background-color: @transparentBg;
       height: auto;
@@ -154,12 +153,14 @@ nav {
 
         .home {
           display: block;
+          margin-right: 0;
         }
       }
 
       .pointer {
         background-color: @navigationBg;
         background-color: @transparentBg;
+        display: block;
       }
     }
 

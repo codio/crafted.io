@@ -101,6 +101,9 @@ section.case-study {
     .description {
       width: 460px;
 
+      @media @smallTablet, @tablet {
+        width: 100%;
+      }
     }
   }
 
@@ -279,7 +282,12 @@ section.case-study {
       width: 80%;
       line-height: 1.8;
       font-size: @mediumFontSize;
+
+      @media @smallPhone {
+        line-height: 2.2;
+        font-size: 0.9em;
+      }
+
     }
   }
-
 }
