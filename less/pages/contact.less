@@ -30,16 +30,12 @@ section#contactus {
       padding: 22px;
     }
 
-    fieldset {
-      border: 0;
-      margin: 0;
-      padding: 0;
-    }
     .fields,
     blockquote {
       float: left;
       width: 500px;
     }
+
     blockquote {
       float: right;
       width: 324px;
@@ -61,6 +57,13 @@ section#contactus {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+
+        &.error {
+          border-color: #f00;
+          -webkit-box-shadow: inset 0 1px 1px rgba(99, 0, 0, 0.075),0 0 6px #f00;
+          -mox-box-shadow: inset 0 1px 1px rgba(99, 0, 0, 0.075),0 0 6px #f00;
+          box-shadow: inset 0 1px 1px rgba(99, 0, 0, 0.075),0 0 6px #f00;
+        }
       }
 
       textarea {
