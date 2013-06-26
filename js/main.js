@@ -57,24 +57,24 @@ $(function () {
             regPhoneTpl = /[^0-9\+\(\)\s-]/g,
             regPhoneCheck = /([0-9]){3,}/,
             fields = $('input,textarea', form),
-            submit = $('[type="submit"]', form)
+            submit = $('[type="submit"]', form);
+
 
         submit.on('click', function (event) {
-            event.preventDefault()
-            disableForm()
+            event.preventDefault();
+            disableForm();
+
+            var phone = fields.filter('[name=phone]');
+            phone.val(phone.val().replace(regPhoneTpl, ''));
 
             fields.each(function (i, field) {
-                field = $(field)
-
-                if (field.attr('type') == 'tel') field.val(field.val().replace(regPhoneTpl, ''))
-
-                if (!validateField(field)) setFieldError(field);
-            })
+                validateField($(field));
+            });
 
             if (fields.filter('.error').length) return enableForm();
 
-            sendForm()
-        })
+            sendForm();
+        });
 
         function sendForm() {
             $.post('http://peaceful-castle-1581.herokuapp.com/', {
@@ -85,64 +85,64 @@ $(function () {
             }, 'json')
                 .done(function (data) {
                     if (data.success) {
-                        fields.add(submit).hide()
-                        form.find('.success-message').show()
-                        return
+                        fields.add(submit).hide();
+                        form.find('.success-message').show();
+                        return;
                     }
 
                     $.each(data.errors, function (key) {
-                        setFieldError(fields.filter('[name=' + key + ']'))
-                    })
+                        setFieldError(fields.filter('[name=' + key + ']'));
+                    });
 
-                    enableForm()
+                    enableForm();
                 })
                 .fail(function (xhr) {
-                    enableForm(xhr.responseText)
-                })
+                    enableForm(xhr.responseText);
+                });
+        }
+
+        function validateField(field) {
+            var type = field.attr('name'),
+                val = $.trim(field.val()),
+                error;
+
+            if (type == 'email') error = !regEmail.test(val);
+            else if (type == 'phone') error = !regPhoneCheck.test(val);
+            else error = val.length <= 0;
+
+            if (error) setFieldError(field);
         }
 
         function setFieldError(field) {
-            field.addClass('error')
+            field.addClass('error');
             field.one('keyup blur', function () {
-                field.removeClass('error')
+                field.removeClass('error');
 
                 if (!fields.filter('.error').length) {
-                    $('.error-message', form).hide()
+                    $('.error-message', form).hide();
                 }
             });
         }
 
-        function validateField(field) {
-            var type = field.attr('type'),
-                val = $.trim(field.val())
-
-            if (type == 'email') return regEmail.test(val);
-
-            if (type == 'tel') return regPhoneCheck.test(val);
-
-            return val.length > 0;
-        }
-
         function disableForm(message) {
-            message = message || 'loading'
+            message = message || 'loading';
             submit.data('label', submit.html());
             submit.html(message + '...');
             fields.add(submit).prop('disabled', true);
-            $('.error-message', form).hide()
+            $('.error-message', form).hide();
         }
 
         function enableForm(error) {
-            error = error || 'Check your data please'
+            error = error || 'Check your data please';
             submit.html(submit.data('label'));
-            fields.add(submit).prop('disabled', false)
-            fields.filter('.error').first().focus()
+            fields.add(submit).prop('disabled', false);
+            fields.filter('.error').first().focus();
 
-            $('.error-message', form).html(error).show()
+            $('.error-message', form).html(error).show();
         }
 
-        return this
+        return this;
     }
 
-    $('#contactus form').contactForm()
-})
-;
+    $('#contactus form').contactForm();
+});
