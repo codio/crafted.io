@@ -74,7 +74,7 @@ $(function () {
         })
 
         function sendForm() {
-            $.post('http://murmuring-ravine-4226.herokuapp.com/', {
+            $.post('http://peaceful-castle-1581.herokuapp.com/', {
                 name: fields.filter('[name=name]').val(),
                 email: fields.filter('[name=email]').val(),
                 phone: fields.filter('[name=phone]').val(),
