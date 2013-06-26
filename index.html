@@ -595,13 +595,20 @@
     </div>
     <div class="page">
         <div class="container">
-            <div class="form" style="padding-bottom: 10px">
+            <form class="form" method="post" action="">
                 <div class="legend">
                     <p>Write to us using the form below and we will get in touch with you quickly, or you can
                         <a href="mailto:services@crafted.io" target="_blank">email</a> us directly.</p>
                 </div>
                 <div class="fields">
-                    <iframe height="450" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none" src="http://craftedio.wufoo.com/embed/z7x4m1/"></iframe>
+                    <input name="name" type="text" placeholder="Your name..." tabindex="1" onkeyup="" required value="123"/>
+                    <input name="email" type="email" spellcheck="false" placeholder="Your email address..." tabindex="2" required value="123@asd.com"/>
+                    <input name="phone" type="tel" spellcheck="false" placeholder="Your phone number..." tabindex="3" value="123"/>
+                    <textarea name="text" spellcheck="true" rows="10" cols="50" tabindex="4" placeholder="How can we help you?" required>123</textarea>
+                    <div class="success-message">
+                        <h3>Thanks for contacting us! We'll be in touch shortly.</h3>
+                    </div>
+                    <h3 class="error-message"></h3>
                 </div>
                 <blockquote>
                     <p>
@@ -614,38 +621,8 @@
                     <div class="sign">Janice Cole - <span class="red">Senior Manager of Field Sales</span></div>
                 </blockquote>
                 <div class="clear"></div>
-            </div>
 
-            <p>And here is original</p>
-
-            <form id="form1" name="form1" class="form wufoo topLabel page" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://craftedio.wufoo.com/forms/z7x4m1/#public">
-                <input type="hidden" id="idstamp" name="idstamp" value="VWUF6/umI4G04w0X/P2dliPWUdG0IA1WDnkdpRNonYI="/>
-                <fieldset>
-                    <div class="legend">
-                        <p>Write to us using the form below and we will get in touch with you quickly, or you can
-                            <a href="mailto:services@crafted.io" target="_blank">email</a> us directly.</p>
-                    </div>
-                    <div class="fields">
-                        <input id="Field12" name="Field12" type="text" class="field text medium" placeholder="Your name..." maxlength="255" tabindex="1" onkeyup="" required value="123"/>
-                        <input id="Field3" name="Field3" type="email" spellcheck="false" class="field text medium" placeholder="Your email address..." maxlength="255" tabindex="2" required value="123@asd.com"/>
-                        <input id="Field13" name="Field13" type="tel" class="field text nospin medium" placeholder="Your phone number..." tabindex="3" onkeyup="" value="123"/>
-                        <textarea id="Field4" name="Field4" class="field textarea medium" spellcheck="true" rows="10" cols="50"
-                                  tabindex="4" onkeyup="" placeholder="How can we help you?" required>123</textarea>
-                    </div>
-                    <blockquote>
-                        <p>
-                            <span class="quote">&ldquo;</span>
-                            Being able to go from concept to a fully deployed solution, including last minute changes, massively impressed the Coca-Cola Enterprises bosses and in a way that was not possible using any other approach available to us.
-                            <span class="quote closing">&rdquo;</span>
-                        </p>
-
-
-                        <div class="sign">Janice Cole - <span class="red">Senior Manager of Field Sales</span></div>
-                    </blockquote>
-                    <div class="clear"></div>
-
-                    <button class="button red" type="submit">Get in touch</button>
-                </fieldset>
+                <button class="button red" type="submit">Get in touch</button>
             </form>
         </div>
     </div>

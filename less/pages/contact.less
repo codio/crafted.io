@@ -66,10 +66,21 @@ section#contactus {
 
         &.error {
           border-color: #f00;
-          -webkit-box-shadow: inset 0 1px 1px rgba(99, 0, 0, 0.075),0 0 6px #f00;
-          -mox-box-shadow: inset 0 1px 1px rgba(99, 0, 0, 0.075),0 0 6px #f00;
-          box-shadow: inset 0 1px 1px rgba(99, 0, 0, 0.075),0 0 6px #f00;
+          -webkit-box-shadow: inset 0 1px 1px rgba(99, 0, 0, 0.075), 0 0 6px #f00;
+          -mox-box-shadow: inset 0 1px 1px rgba(99, 0, 0, 0.075), 0 0 6px #f00;
+          box-shadow: inset 0 1px 1px rgba(99, 0, 0, 0.075), 0 0 6px #f00;
         }
+      }
+
+      .success-message, .error-message {
+        display: none;
+      }
+
+      .error-message {
+        color: #d34d3e;
+      }
+      .success-message {
+        text-align: center;
       }
 
       textarea {
@@ -83,14 +94,17 @@ section#contactus {
       font-size: @mediumFontSize;
     }
 
+
     @media @smallTablet, @tablet, @phone {
       blockquote {
         display: none
       }
+
       .fields {
         float: none;
         width: 100%;
       }
+
       button {
         margin: auto;
       }
