@@ -55,7 +55,7 @@ $(function () {
         var form = this,
             regEmail = /[\w\.+]{1,}[@][\w\-]{1,}([.]([\w\-]{1,})){1,5}$/ig,
             regPhoneTpl = /[^0-9\+\(\)\s-]/g,
-            regPhoneCheck = /[^0-9]/g,
+            regPhoneCheck = /([0-9]){3,}/,
             fields = $('input,textarea', form),
             submit = $('[type="submit"]', form)
 
@@ -66,9 +66,9 @@ $(function () {
             fields.each(function (i, field) {
                 field = $(field)
 
-                if (field.attr('type') == 'tel') return field.val(field.val().replace(regPhoneTpl, ''))
+                if (field.attr('type') == 'tel') field.val(field.val().replace(regPhoneTpl, ''))
 
-                !validateField(field) && setFieldError(field);
+                if (!validateField(field)) setFieldError(field);
             })
 
             if (fields.filter('.error').length) return enableForm();
@@ -118,7 +118,7 @@ $(function () {
 
             if (type == 'email') return regEmail.test(val);
 
-            if (type == 'tel') return val.replace(regPhoneCheck, '');
+            if (type == 'tel') return regPhoneCheck.test(val);
 
             return val.length > 0;
         }
