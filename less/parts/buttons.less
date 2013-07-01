@@ -15,11 +15,15 @@
   box-sizing: border-box;
   font-size: @hugeFontSize;
 
+  &:hover {
+    color: #ffffff;
+  }
+
   &.red {
     background-color: #D44E3E;
 
     &:hover {
-      background-color: saturate(#D44E3E, 15%) ;//#EE2222;
+      background-color: saturate(#D44E3E, 15%);//#EE2222;
       transition: background-color 200ms ease;
       -webkit-transition: background-color 200ms ease;
       -moz-transition: background-color 200ms ease;
