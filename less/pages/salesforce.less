@@ -1,0 +1,58 @@
+section#salesforce {
+
+  .page {
+    background: url(../img/salesforce_bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 90px 0px ;
+
+    @media @tablet {
+      background-image: url(../img/salesforce_bg_tablet.jpg);
+    }
+
+    @media @smallTablet {
+      background-image: url(../img/salesforce_bg_mobile.jpg);
+    }
+
+    .mobile-page
+  }
+
+  .overview {
+    padding: 30px 50px 0;
+    line-height: 1.46;
+    position: relative;
+    z-index: 1;
+    min-height: 390px;
+
+    .content {
+      color: #ddd;
+      width: 50%;
+      float: right;
+    }
+    img {
+      float: left;
+      padding-top: 35px;
+    }
+    .shade {
+      .shade(35px);
+    }
+
+    @media @smallTablet, @tablet {
+      padding: 20px;
+
+      .content {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        max-width: 318px;
+        padding: 0 0 10px;
+        float: none;
+        margin: auto;
+        display: block;
+      }
+    }
+  }
+
+}
