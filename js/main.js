@@ -95,6 +95,7 @@ $(function () {
                         fields.add(submit).hide();
                         form.find('.success-message').show();
                         $('body').append(conversionTraking)
+                        ga('send', 'event', 'lead', 'lead');
                         return;
                     }
 
