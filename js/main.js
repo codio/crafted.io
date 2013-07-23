@@ -4,6 +4,7 @@ $(function () {
         minScreenSize = 650,
         scrollEl = $('html,body'),
         conversionTraking = [
+            '<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>',
             '<noscript>',
             '<div style="display:inline;">',
             '<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/994924973/?value=0&amp;label=ndt-COvQxgUQrbO12gM&amp;guid=ON&amp;script=0"/>',
