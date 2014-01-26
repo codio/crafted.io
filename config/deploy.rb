@@ -1,27 +1,17 @@
-require 'capistrano/ext/multistage'
+set :application, 'crafted-site'
+set :repo_url, 'https://github.com/codio/crafted.io.git'
+set :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
-set :deploy_to, "/home/middleman/crafted-site"
-set :application, "crafted-site"
+set :deploy_to, '/var/www/crafted/site'
 set :scm, :git
-set :repository, "git@github.com:codio/crafted.io.git"
-set :use_sudo, false
-set :user, "middleman"
 
-# Setup stages
-set :stages, %w(production staging)
-set :default_stage, "staging"
-
-set :keep_releases, 3
-
-# Deploys the current branch
-set(:current_branch) { `git branch --no-color`.match(/\*\s(.+)\n/)[1] || raise("Couldn't determine current branch") }
-set :branch, defer { current_branch } unless exists?(:branch)
-
-after "deploy:restart", "deploy:cleanup"
+set :npm_flags, '--silent'
 
 
-namespace :deploy do
-  task :finalize_update, :except => { :no_release => true } do
-    # Do nothing
+after 'deploy:updated', :build do
+  on roles(:all) do |host|
+    within release_path do
+      execute :grunt, :build
+    end
   end
 end
